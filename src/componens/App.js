@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import { Profile } from './Profile/Profile';
 import { Container } from '../componens/Container/Container.styled';
 import { StatisticSection } from './Statistics/StaisticSection';
+import { FriendList } from './FriendsList/FriendsList';
 import user from '../data/user.json';
 
 function App() {
@@ -16,8 +17,8 @@ function App() {
           avatar={user.avatar}
           stats={user.stats}
         ></Profile>
-
         <StatisticSection></StatisticSection>
+        <FriendList></FriendList>
       </Container>
     </>
   );
