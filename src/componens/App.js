@@ -3,6 +3,7 @@ import { Profile } from './Profile/Profile';
 import { Container } from '../componens/Container/Container.styled';
 import { StatisticSection } from './Statistics/StaisticSection';
 import user from '../data/user.json';
+
 function App() {
   return (
     <>
@@ -15,6 +16,7 @@ function App() {
           avatar={user.avatar}
           stats={user.stats}
         ></Profile>
+
         <StatisticSection></StatisticSection>
       </Container>
     </>
