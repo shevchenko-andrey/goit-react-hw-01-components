@@ -5,6 +5,8 @@ import { StatisticSection } from './Statistics/StaisticSection';
 import { FriendList } from './FriendsList/FriendsList';
 import { TransactionHistory } from './TransactionHistory/TransactionHistory';
 import user from '../data/user.json';
+import friends from '../data/friendsList.json';
+import transaction from '../data/transactionData.json';
 
 function App() {
   return (
@@ -19,8 +21,8 @@ function App() {
           stats={user.stats}
         ></Profile>
         <StatisticSection></StatisticSection>
-        <FriendList></FriendList>
-        <TransactionHistory></TransactionHistory>
+        <FriendList friends={friends}></FriendList>
+        <TransactionHistory transaction={transaction}></TransactionHistory>
       </Container>
     </>
   );
@@ -31,6 +33,14 @@ Profile.propTypes = {
   location: PropTypes.string,
   avatar: PropTypes.string,
   stats: PropTypes.object,
+};
+
+FriendList.propTypes = {
+  friends: PropTypes.array,
+};
+
+TransactionHistory.propTypes = {
+  friends: PropTypes.array,
 };
 
 export default App;

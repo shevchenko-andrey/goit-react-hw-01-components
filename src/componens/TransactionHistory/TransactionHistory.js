@@ -1,8 +1,7 @@
 import { TransactionTable } from './TransactionHistory.styled';
 import { TransactionItem } from './TransactionItem';
-import transaction from '../../data/transactionData.json';
 
-export function TransactionHistory() {
+export function TransactionHistory({ transaction }) {
   return (
     <TransactionTable>
       <thead>
