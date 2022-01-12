@@ -3,6 +3,7 @@ import { Profile } from './Profile/Profile';
 import { Container } from '../componens/Container/Container.styled';
 import { StatisticSection } from './Statistics/StaisticSection';
 import { FriendList } from './FriendsList/FriendsList';
+import { TransactionHistory } from './TransactionHistory/TransactionHistory';
 import user from '../data/user.json';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         ></Profile>
         <StatisticSection></StatisticSection>
         <FriendList></FriendList>
+        <TransactionHistory></TransactionHistory>
       </Container>
     </>
   );
