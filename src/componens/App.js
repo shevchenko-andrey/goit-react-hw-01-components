@@ -1,12 +1,13 @@
 import PropTypes from 'prop-types';
 import { Profile } from './Profile/Profile';
 import { Container } from '../componens/Container/Container.styled';
-import { StatisticSection } from './Statistics/StaisticSection';
+import { Statistics } from './Statistics/Statistics';
 import { FriendList } from './FriendsList/FriendsList';
 import { TransactionHistory } from './TransactionHistory/TransactionHistory';
 import user from '../data/user.json';
 import friends from '../data/friendsList.json';
 import transaction from '../data/transactionData.json';
+import statistics from '../data/statistic.json';
 
 function App() {
   return (
@@ -18,10 +19,11 @@ function App() {
           location={user.location}
           avatar={user.avatar}
           stats={user.stats}
-        ></Profile>
-        <StatisticSection></StatisticSection>
-        <FriendList friends={friends}></FriendList>
-        <TransactionHistory transaction={transaction}></TransactionHistory>
+        />
+        <Statistics statistics={statistics} title="Upload stats" />
+        <Statistics statistics={statistics} />
+        <FriendList friends={friends} />
+        <TransactionHistory transaction={transaction} />
       </Container>
     </>
   );
@@ -35,11 +37,16 @@ Profile.propTypes = {
 };
 
 FriendList.propTypes = {
-  friends: PropTypes.array,
+  friends: PropTypes.array.isRequired,
 };
 
 TransactionHistory.propTypes = {
-  friends: PropTypes.array,
+  transaction: PropTypes.array.isRequired,
+};
+
+Statistics.propTypes = {
+  statistics: PropTypes.array.isRequired,
+  title: PropTypes.string,
 };
 
 export default App;
