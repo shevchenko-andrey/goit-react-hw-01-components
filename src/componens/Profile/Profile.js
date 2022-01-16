@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import {
   ProfileCard,
   AvatarWrapper,
@@ -37,3 +39,14 @@ export function Profile({ username, tag, location, avatar, stats }) {
     </ProfileCard>
   );
 }
+
+Profile.propTypes = {
+  username: PropTypes.string,
+  tag: PropTypes.string,
+  location: PropTypes.string,
+  avatar: PropTypes.string,
+  stats: (PropTypes.objectOf = {
+    [PropTypes.string]: PropTypes.string,
+    [PropTypes.string]: PropTypes.number,
+  }),
+};

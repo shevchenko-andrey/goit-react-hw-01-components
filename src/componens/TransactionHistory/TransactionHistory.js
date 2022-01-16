@@ -1,7 +1,8 @@
+import PropTypes from 'prop-types';
 import { TransactionTable } from './TransactionHistory.styled';
 import { TransactionItem } from './TransactionItem';
 
-export function TransactionHistory({ transaction }) {
+export function TransactionsHistory({ transactions }) {
   return (
     <TransactionTable>
       <thead>
@@ -11,7 +12,10 @@ export function TransactionHistory({ transaction }) {
           <th>Currency</th>
         </tr>
       </thead>
-      <tbody>{transaction.map(TransactionItem)}</tbody>
+      <tbody>{transactions.map(TransactionItem)}</tbody>
     </TransactionTable>
   );
 }
+TransactionsHistory.propTypes = {
+  transactions: PropTypes.arrayOf(PropTypes.shape).isRequired,
+};

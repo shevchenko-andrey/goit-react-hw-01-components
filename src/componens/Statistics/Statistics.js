@@ -1,5 +1,7 @@
+import PropTypes from 'prop-types';
+
 import { Section, List, Title } from './Statistics.styled';
-import { StatisticItem } from './StatisticsItem';
+import StatisticItem from './StatisticItem';
 
 export function Statistics({ statistics, title }) {
   return (
@@ -9,3 +11,7 @@ export function Statistics({ statistics, title }) {
     </Section>
   );
 }
+Statistics.propTypes = {
+  title: PropTypes.string,
+  statistics: PropTypes.array.isRequired,
+};

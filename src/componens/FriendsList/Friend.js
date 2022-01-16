@@ -1,5 +1,7 @@
+import PropTypes from 'prop-types';
 import { Item, Online, Offline, Name } from './FriendList.styled';
-export function Friend({ id, isOnline, avatar, name }) {
+
+function Friend({ id, isOnline, avatar, name }) {
   return (
     <Item key={id}>
       {isOnline ? <Online></Online> : <Offline></Offline>}
@@ -8,3 +10,15 @@ export function Friend({ id, isOnline, avatar, name }) {
     </Item>
   );
 }
+
+Friend.propTypes = {
+  friends: PropTypes.arrayOf(
+    PropTypes.shape({
+      avatar: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      isOnline: PropTypes.bool.isRequired,
+      id: PropTypes.number.isRequired,
+    })
+  ),
+};
+export default Friend;
