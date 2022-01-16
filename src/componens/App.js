@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
-import { Profile } from './Profile/Profile';
-import { Container } from '../componens/Container/Container.styled';
-import { Statistics } from './Statistics/Statistics';
+import Profile from './Profile/Profile';
+import Container from '../componens/Container/Container.styled';
+import Statistics from './Statistics/Statistics';
 import FriendList from './FriendsList/FriendsList';
-import { TransactionsHistory } from './TransactionHistory/TransactionHistory';
+import TransactionsHistory from './TransactionHistory/TransactionHistory';
 import user from '../data/user.json';
 import friends from '../data/friendsList.json';
 import transactions from '../data/transactionData.json';

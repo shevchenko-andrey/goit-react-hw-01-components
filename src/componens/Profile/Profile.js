@@ -11,7 +11,7 @@ import {
   StatsLabel,
 } from '../Profile/Profile.styled';
 
-export function Profile({ username, tag, location, avatar, stats }) {
+function Profile({ username, tag, location, avatar, stats }) {
   return (
     <ProfileCard>
       <AvatarWrapper>
@@ -50,3 +50,4 @@ Profile.propTypes = {
     [PropTypes.string]: PropTypes.number,
   }),
 };
+export default Profile;

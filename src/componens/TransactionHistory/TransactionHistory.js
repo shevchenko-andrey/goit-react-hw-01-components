@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { TransactionTable } from './TransactionHistory.styled';
 import { TransactionItem } from './TransactionItem';
 
-export function TransactionsHistory({ transactions }) {
+function TransactionsHistory({ transactions }) {
   return (
     <TransactionTable>
       <thead>
@@ -19,3 +19,4 @@ export function TransactionsHistory({ transactions }) {
 TransactionsHistory.propTypes = {
   transactions: PropTypes.arrayOf(PropTypes.shape).isRequired,
 };
+export default TransactionsHistory;
